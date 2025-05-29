@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+   
+
+}
+
+.container{
+    max-width: 75vw;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    
+}
+
+.header-container{
+  
+    margin-bottom: 2.8rem;
+}
+
+.header-title {
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.header-desc{
+    max-width: 468px;
+    text-align: center;
+    color: grey;
+    margin: 0 auto;font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.main-container{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(1 , 1FR);
+
+}
+
+@media (min-width : 720px) {
+    .main-container{
+        grid-template-columns: repeat(2,1FR);
+    }
+}
+
+@media (min-width : 1325px) {
+    .main-container{
+        grid-template-columns: repeat(3,1FR);
+    }
+}
+
+@media (min-width : 1500px) {
+    .main-container{
+        grid-template-columns: repeat(4,1FR);
+    }
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(231, 231, 231); 
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.card-image-container{
+
+    position: relative;
+    overflow: hidden;
+    height: 7rem;
+    
+}
+
+@media(min-width: 1215px){
+    .card-image-container{
+        height: 12rem;
+    }
+}
+
+.card-image{
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.card-title-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+
+}
+
+.card-container:hover .card-image{
+    transform: scale(1.1);
+    transition-duration: 200ms;
+}
+
+.card-title{
+     font-size: 1rem;
+     font-weight: 600;
+     color: black;
+     line-height: 1.5rem;
+     margin-bottom: 0.3rem;
+}
+
+.card-title:hover a{
+    color: aqua;
+}
+
+.card-title-anchor:hover .card-title{
+    color: rgb(143, 143, 234);
+}
+
+.card-desc{
+    color: gray;
+    font-size: 1rem;
+}
+
+.card-footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1.5rem;
+}
+
+.author-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+
+}
+
+.author-avatar-container{
+    height: 2.5rem;
+    width: 2.5rem;
+    overflow: hidden;
+    border: 1px solid rgb(160, 157, 157);
+    border-radius: 50%;
+    background-color:  rgb(192, 191, 191);
+}
+
+.author-info-conatainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.name{
+    color: rgb(78, 166, 248);
+}
+
+.date{
+    color: rgb(175, 175, 175);
+}
+
+.card-tag-container{
+    font-size: 0.9rem;
+    color: rgb(90, 87, 87);
+    border: 1px solid rgb(134, 134, 134);
+    border-radius: 5px;
+    line-height: 1.3rem;
+    padding: 0.2rem 0.3rem;
+}
+
